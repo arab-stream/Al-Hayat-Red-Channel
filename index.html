@@ -2,13 +2,13 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8" />
-<meta name="description" content="شاهد قناة الحياة المصرية بث مباشر بجودة عالية وبدون تقطيع على مدار الساعة." />
-<meta name="keywords" content="قناة الحياة, الحياة بث مباشر, قناة الحياة مباشر, بث مباشر الحياة المصرية" />
+<meta name="keywords" content="قناة الحياة, الحياة بث مباشر, قناة الحياة مباشر, بث مباشر الحياة المصرية, لايف, أونلاين, تردد, الكمبيوتر, الموبايل, التابلت" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>قناة الحياة المصرية بث مباشر</title>
 
 <!-- خط كايرو -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" />
+
 <style>
 * {
   margin: 0;
@@ -22,9 +22,12 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  justify-content: center;
+  height: 100vh;
   color: #fff;
-  padding: 20px;
+  margin: 0;
+  padding: 10px;
+  overflow: hidden;
 }
 
 /* الصندوق الزجاجي */
@@ -33,24 +36,24 @@ body {
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 20px;
-  padding: 40px 20px 20px;
+  padding: 30px 15px 15px;
   text-align: center;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   width: 90%;
   max-width: 500px;
   position: relative;
-  margin-top: 80px;
   animation: fadeIn 1s ease-in-out;
+  max-height: 40%;
 }
 
 /* اللوجو */
 .logo {
   position: absolute;
-  top: -80px;
+  top: -70px;
   left: 50%;
   transform: translateX(-50%);
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   border-radius: 50%;
   border: 4px solid rgba(255, 215, 0, 0.9);
@@ -63,11 +66,11 @@ body {
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
   padding: 10px 20px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   border-radius: 50px;
-  margin-top: 80px;
-  margin-bottom: 20px;
+  margin-top: 70px;
+  margin-bottom: 10px;
   color: #FFD700;
   box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.3);
   display: inline-block;
@@ -77,8 +80,8 @@ body {
 .watch-btn {
   background: rgba(255, 215, 0, 0.8);
   color: #0F4551;
-  padding: 12px 25px;
-  font-size: 18px;
+  padding: 10px 20px;
+  font-size: 16px;
   font-weight: bold;
   border: none;
   border-radius: 50px;
@@ -94,49 +97,61 @@ body {
 /* رسالة التحويل */
 .loading {
   display: none;
-  margin-top: 15px;
-  font-size: 18px;
+  margin-top: 10px;
+  font-size: 16px;
   font-weight: bold;
   color: #FFD700;
   animation: blink 1s infinite;
 }
 
+/* الوصف النصي منفصل */
+.description-text {
+  max-width: 900px;
+  margin: 10px auto 0 auto;
+  font-size: 14px;
+  color: #fff;
+  line-height: 1.5;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2);
+  text-align: right;
+  max-height: 30%;
+  overflow: hidden;
+}
+
 /* القنوات المقترحة */
 .suggested {
-  margin-top: 50px;
+  margin-top: 10px;
+  max-height: 25%;
+  overflow: hidden;
   width: 100%;
-  max-width: 1000px;
-  text-align: center;
 }
 .suggested h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 20px;
+  margin-bottom: 10px;
   color: #FFD700;
+  text-align: center;
 }
 .channels {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 25px;
-  padding: 10px;
-  justify-items: center;
-}
-.channel {
-  text-align: center;
-  transition: transform 0.3s;
-}
-.channel:hover {
-  transform: scale(1.1);
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 5px 0;
 }
 .channel img {
-  width: 160px;
-  height: 160px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.2);
   backdrop-filter: blur(10px);
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-  padding: 5px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  padding: 3px;
 }
 
 /* الحركات */
@@ -151,53 +166,53 @@ body {
 
 /* تجاوب */
 @media (max-width: 600px) {
-  .glass {
-    padding: 50px 15px 15px;
-  }
-  .logo {
-    width: 120px;
-    height: 120px;
-    top: -60px;
-  }
-  .title-glass {
-    font-size: 18px;
-  }
-  .watch-btn {
-    font-size: 16px;
-    padding: 10px 20px;
-  }
-  .channel img {
-    width: 130px;
-    height: 130px;
-  }
+  .glass { padding: 40px 10px 10px; max-height: 45%; }
+  .logo { width: 100px; height: 100px; top: -60px; }
+  .title-glass { font-size: 16px; margin-top: 60px; }
+  .watch-btn { font-size: 14px; padding: 8px 15px; }
+  .description-text { font-size: 12px; padding: 10px; max-height: 25%; }
+  .channel img { width: 80px; height: 80px; }
 }
+
 </style>
 </head>
 <body>
 
-<!-- الكارت الرئيسي -->
+<!-- الكارد الرئيسي -->
 <div class="glass">
-    <img class="logo" alt="لوجو قناة الحياة" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR1hnU8XIkBDa7p6CzhgRYRBPQ9z-eS8MnFz6mSG6Xcn7llFw9rH7u3OxzWUz75EAl7YTEc6C2Vp7OOMWeGVqmlb0_sx2l-TshL5GAw9YOp6NDVsj-Px8X1b_BcG1CvhIwNeknCmZocrjPb-Vp4SmlY0leFY5IORz4PLb4QfS7PjOH3GuAcoUsexpwOA/s320/hayah.webp" />    
+    <img class="logo" alt="لوجو قناة الحياة" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgR1hnU8XIkBDa7p6CzhgRYRBPQ9z-eS8MnFz6mSG6Xcn7llFw9rH7u3OxzWUz75EAl7YTEc6C2Vp7OOMWeGVqmlb0_sx2l-TshL5GAw9YOp6NDVsj-Px8X1b_BcG1CvhIwNeknCmZocrjPb-Vp4SmlY0leFY5IORz4PLb4QfS7PjOH3GuAcoUsexpwOA/s320/hayah.webp" />
+    
     <div class="title-glass">
-        قناة الحياة المصرية
+         قناة الحياة المصرية بث مباشر
     </div>
+    
     <button onclick="startRedirect()" class="watch-btn">
         اضغط لمشاهدة البث المباشر
     </button>
+    
     <p id="loading" class="loading">
         جاري تحويلك إلى صفحة المشاهدة... <span id="timer">5</span> ثوانٍ
     </p>
+</div>
+
+<!-- الوصف النصي منفصل -->
+<div class="description-text">
+شاهد قناة الحياة المصرية **بث مباشر لايف** عبر الإنترنت مجانًا على جميع الأجهزة مثل الكمبيوتر والموبايل والتابلت. قناة الحياة تقدم محتوى متنوع يشمل برامج دينية، ترفيهية، ثقافية وأخبار حصرية على مدار الساعة. استمتع بمسلسلات عربية وبرامج حوارية تغطي أهم الأحداث والقضايا في مصر والعالم، بالإضافة إلى نشرات إخبارية وبرامج دينية تثري معرفتك.  
+
+يمكنك متابعة قناة الحياة أونلاين بدون تقطيع، بجودة عالية وصوت واضح، ومعرفة تردد القناة على النايل سات للبث عبر التلفاز. هذه القناة مناسبة لكل من يبحث عن **بث مباشر مباشر لايف أونلاين** على الكمبيوتر، الموبايل، أو التابلت، وتعتبر من أفضل القنوات المصرية التي توفر مشاهدة مجانية وسهلة على الإنترنت.  
+
+تابع قناة الحياة الآن لاكتشاف كل جديد من برامج ومسلسلات وأخبار حصرية مباشرة، واستمتع بتجربة مشاهدة سلسة عبر الإنترنت بدون أي مشاكل.
 </div>
 
 <!-- القنوات المقترحة -->
 <div class="suggested">
     <h2>قنوات مقترحة</h2>
     <div class="channels">
-        <a href="#" class="channel"><img alt="قناة 1" src="https://files.catbox.moe/xm3y8l.webp" /></a>
-        <a href="#" class="channel"><img alt="قناة 2" src="https://files.catbox.moe/xm3y8l.webp" /></a>
-        <a href="#" class="channel"><img alt="قناة 3" src="https://files.catbox.moe/xm3y8l.webp" /></a>
-        <a href="#" class="channel"><img alt="قناة 4" src="https://files.catbox.moe/xm3y8l.webp" /></a>
-        <a href="#" class="channel"><img alt="قناة 5" src="https://files.catbox.moe/xm3y8l.webp" /></a>
+        <a href="https://www.arab-stream.live/2024/04/hayat-drama.html" class="channel"><img alt="قناة 1" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhiAsVHchLp5k_8TW7KWYZJmiz5MKIPPyAAY01LCaQl041uow1JiyeQL_ksQPRHStGltTcmaYBAyPNnm1o6bXJ_dM_LR37QjIupYxQZzn3O9_cGbsuU3pQdHTMsaOvG0FDWqzQQHaKRDuKPd23nQ66k91R6ejuIHqYQiu69Uyyq1lehQnciEYxpp764yw/s320/hayah-drama.webp" /></a>
+        <a href="https://www.arab-stream.live/2024/08/National-Geographic-abu-Dhabi.html" class="channel"><img alt="قناة 2" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgXA25wVwCL6uCuYW9dqFIXxRKfpulIVxIiVf8BS-A88wyDn4NlZZOmZgB8ZAOg9yvlo8nnwlG_O1WJWbZZm_MbJcpr99dZ1wMaGhE0ErmBzn9cSI9B2s5OJhSEXK3gpqGAArqh8722xvhmF9N72xJpHoU_jYrYdjhMm5oaQ0K6gdRRRb1fWUNhdq69tA/s200/National-Geographic-Abu-Dhabi.webp" /></a>
+        <a href="https://www.arab-stream.live/2024/04/on.html" class="channel"><img alt="قناة 3" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjh6ztjZ2uIAWQuynVpJ6o0_z14jLNmiWDCqMxkmm5Pd9FZ41v7Fexg31qp4vaCefMqc6bhfqJmPL4gHO2xjzNdXtjtZaGeAO3zKdhZiBTJB1Dp1Tm1N70lGvzu_USKzegfWgAgTAlA5h_fqeDxeWhSDdGwPnbmljjoMJNmqCzGhXuXbLYPMUMpIMEZpQ/s320/on.webp" /></a>
+        <a href="https://www.arab-stream.live/2025/04/mbc-misr-drama.html" class="channel"><img alt="قناة 4" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDDE_MvGKc4I7l8GA4uMXVd2ewjK6i2KmuJQ_fgFa_6Fp4XTW1IoEKOb09eLqieDtCNhURxTe1P9gmfUP5ByJMGClFE-JrNSGoiBbpUohf1CB26iGoXOtDEvD4LH6vScVm_e4za-8c70fscQrIxg6205mjbov2y4COt0l8ireQOIhnp6m7YNjQ27LNbw/s320/mbc-masr-drama.webp" /></a>
+        <a href="https://www.arab-stream.live/2024/04/mbc-2.html" class="channel"><img alt="قناة 5" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhtA6GS6DwDBfsZnB6bunXRopp-foelqdv7kBwUFF1cSFxSsM1B3oulFfwuYKbn1v-Exj14GlAxHB2Iw2-aXY9SAY4x0t3a2FIvYScI-m1HhIrij8wISxvxcPiFnA_o_86XxRyzvHwtMi06hh-ikkqRD4TB8FN5sYbxSSfGxRd0NpOr_Fnl27aItcve3g/s320/mbc%202.webp" /></a>
     </div>
 </div>
 
